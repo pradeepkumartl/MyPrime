@@ -1,0 +1,202 @@
+.imgShow{
+    height: 40vh;
+    min-height: 280px;
+    width: 100vw;
+    position: relative;
+}
+.imgShow img{
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background-image: cover;
+    
+}
+.accordionCls{
+    position: absolute;
+    top: 70%;
+    display: flex;
+    left: 50%;
+    top: 90%;
+    z-index: 9;
+}
+.circleCls{
+    position: relative;
+    color: #808080;
+    top: 70%;
+    width: 18px;
+    height: 10px;
+}
+.active{
+    color: #fff;
+}
+.prevSpan{
+    top: 45%;
+    left: 1%;
+}
+.nextSpan{
+    left: 98%;
+    top: 45%;
+}
+.arrow{
+    z-index: 9;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    color: #fff !important;
+    font-size: 48px;
+}
+
+.arrow:hover{
+    color: rgb(245, 179, 56) !important;
+    /*font-size: 58px;*/
+    background-color: transparent;
+}
+
+.list{
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 30vh;
+    white-space: nowrap;
+    margin: 10px 0px 0px 0px;
+    position: relative;
+}
+
+.itemList{
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    height: 80%;
+    margin-bottom: 0px;
+    scroll-behavior: smooth;
+}
+
+.itemList::-webkit-scrollbar{
+    height: 0px;
+    width: 0px;
+}
+
+.item{
+    border-radius: 0px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: black;
+}
+.prevSpanItem{
+    height: 100%;
+    width: 30px;    
+    position: absolute;
+    background-color: transparent;
+    text-align: center;
+}
+.nextSpanItem{
+    height: 100%;
+    width: 30px;
+    position: absolute;
+    left: 98%;
+    background-color: transparent;
+    text-align: center;
+}
+/* .prevSpanList{
+    top: 45%;
+    left: 5%;
+} */
+/* .nextSpanList{
+    left: 95%;
+    top: 45%;
+} */
+.arrowList{
+    z-index: 9;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 30px;
+    /* top: 40%; */
+    height: 100%;
+    /* display: flex; */
+    position: relative;
+    color: #fff !important;
+    font-size: 48px;
+}
+
+.arrowList:hover{
+    color: rgb(245, 179, 56) !important;
+    /*font-size: 58px;*/
+    background-color: #f1f1f1;
+}
+.fa-angle-left:before, .fa-angle-right:before{
+    transform: translate(0%,30%);
+}
+
+
+/*New css*/
+.mylist{
+    background-color: rgb(73, 74, 75);
+    height: 30vh;
+    margin: 30px 0px;
+    position: relative; 
+    /* transform: translate(0);*/
+}
+.myItemCls{
+    height: 80%; 
+    width: 100%;
+    background-color: rgb(73, 74, 75);
+    white-space: nowrap;
+    position: absolute;
+    
+}
+.myItemCls .eleCls{
+    margin-right: 10px;
+    background-color:black;
+    background-image: url(https://homepages.cae.wisc.edu/~ece533/images/airplane.png);
+    background-size: 100% 100%;
+    border-radius: 5px;
+    transition: 1s height linear, 1s transform linear;
+}
+.eleCls:hover{
+    transform: scale(2,2);
+    height: 200px;
+}
+.myItemCls > div:last-child{
+    margin-right: 0px;
+}
+.eleCls:first-child{
+    margin-left: 60px;
+}
+
+.myItemDiv{
+    height: 100%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    cursor: pointer;
+}
+
+.myItemDiv::-webkit-scrollbar{
+    height: 0px;
+    width: 0px;
+}
+.prevDiv,.nextDiv a{
+    font-size: 48px;
+}
+.prevDiv,.nextDiv{
+    position: absolute;
+    width: 50px;
+    background-color: #b0b0b0;
+    background: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5));
+    color: #fff;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.prevDiv:hover,.nextDiv:hover{
+    background-color: #505050;
+    background: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5));
+    color:rgb(245, 179, 56) !important;
+}
+.nextDiv{
+    right: 0px;
+}

@@ -1,0 +1,41 @@
+<!-- Carousel -->
+<div class=""> 
+  <div class="imgShow">
+    <a class="prevSpan arrow fa fa-angle-left" (click)="changeImg(image.list-1)"></a>
+    <img src="{{image.src}}">
+    <span class="accordionCls">
+      <i class="circleCls fa fa-circle" [ngClass]="activeIndex=== i ? 'active': ''" 
+      *ngFor="let img of imgList; let i=index" (click)="changeImg(i)"></i>
+    </span>
+    <a class="nextSpan arrow fa fa-angle-right" (click)="changeImg(image.list+1)"></a>
+  </div>
+  
+  <!-- List of divs -->
+  <!-- <div class="list" *ngFor="let indList of [1];let i of index" [id]="i+'element'" hidden=true>
+    <h3 style="color:#fff">Recommended for you</h3>
+    <div class="prevSpanItem" #prevItem (click)="scrollImg('Left')"><a class="prevSpanList arrowList fa fa-angle-left" ></a></div>
+    <span class="nextSpanItem" (click)="scrollImg('Right')"><a class="nextSpanList arrowList fa fa-angle-right"></a></span>
+    <div class="itemList row mx-auto w-100" #itemList>
+      <div class="item card col-sm-4 col-lg-3 h-100" *ngFor="let ele of [1,2,3,4,5,6,1,2,3,4,5,6,1,2]" [id]="ele">
+        <div class="card-body">
+          <div class="card-title"><h2>{{ele}} Card Title</h2></div>
+          <div class="card-text">This is a sample text</div>
+        </div>
+        <div class="card-footer">footer</div>
+      </div>
+    </div>
+  </div> -->
+  
+  <div class="mylist w-100 mt-20">
+    <h4 style="color: #fff; margin-left: 50px;">My List</h4>
+    <div class="myItemCls">
+      <div class="prevDiv" #prev (click)="scrollImg('Left',1)"><a class="fa fa-angle-left"></a></div>
+      <div class="nextDiv" #next (click)="scrollImg('Right', 1)"><a class="fa fa-angle-right"></a></div>
+      <div class="row myItemDiv" #itemList (scroll)="itemListScroll($event)">
+        <div class="col-sm-3 eleCls" #myMovieItems (mouseover)="onMouseOver($event, e)" (blur)="onblur($event,e)" *ngFor="let ele of [1,2,3,4,5];let e = index;">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

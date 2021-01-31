@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Amazon Ember,Amazon Arabic Ember,Arial,sans-serif;
+    font-size: 16px;
+}
+
+body button,input:focus{
+    outline: none;
+    color: #fff;
+}
+
+body button{
+    transition: color 2s;
+}
+body button:hover{
+    color: #fff;
+}
+
+body::-webkit-scrollbar{
+    height: 0px;
+    width: 0px;
+}
+:root {
+    --bgColor: rgb(73, 74, 75);
+    --navBgColor: rgb(43, 72, 102);
+    --navBgColorLite: rgb(58, 97, 138);
+}

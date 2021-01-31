@@ -1,0 +1,78 @@
+.container-fluid{
+    background-color: var(--bgColor);
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    position: relative !important;
+}
+
+.Navbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-between;
+    height: 10vh;
+    background-color: var(--navBgColor);
+    color: #fff;
+    padding-left: 50px;
+    margin: auto;
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    z-index: 999;
+}
+
+.navItems{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+
+.modalCls{
+    width:200px;
+    background-color: var(--navBgColorLite);
+    top: 100%;
+    position: absolute;
+}
+
+.categoryCls{
+    padding: 10px 0px;
+}
+
+.searchCls{
+    border: none;
+    background: none;
+    color: #808080;
+    font-size: 22px;
+    transition: 0.2s color linear;
+}
+
+.searchCls:hover, .searchCls.transform-active{
+    color: #fff;
+}
+
+.borderCls{
+    height: 60%;
+    transition: .2s border linear;
+}
+
+.borderCls.transform-active{
+    border: 0.5px solid #fff;
+}
+
+.inputCls{
+    border: none;
+    width: 0px;
+    background-color: var(--navBgColor);
+    transition: .2s width linear;
+}
+.inputCls:focus{
+    outline: none;
+    color: #fff;
+}
+.inputCls.transform-active{
+    width: 90%;
+}
